@@ -2,7 +2,7 @@
 
 #Variables 
 TDATA_DIR=~/.local/share/TelegramDesktop/tdata
-TELEGRAM_DESKTOP_FILE=$(ls /usr/share/applications | grep -i telegram)
+TELEGRAM_DESKTOP_FILE=/usr/share/applications/$(ls /usr/share/applications | grep -i telegram)
 EXEC_VAR=$(grep ^Exec /usr/share/applications/telegramdesktop.desktop | cut -d'=' -f2,3)
 
 
