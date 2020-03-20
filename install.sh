@@ -13,4 +13,5 @@ CUSTOM_FONT=~/.local/share/TelegramDesktop/tdata
 cp fonts.conf $CUSTOM_FONT
 
 exec_var=$(grep ^Exec /usr/share/applications/telegramdesktop.desktop | cut -d'=' -f2,3)
-sudo sed -ri "s|^Exec=.*|Exec=env FONTCONFIG_FILE=~/.local/share/TelegramDesktop/fonts.conf $exec_var|"
+echo $exec_var
+sudo sed -ri "s|^Exec=.*|Exec=env FONTCONFIG_FILE=~/.local/share/TelegramDesktop/fonts.conf $exec_var|" /usr/share/applications/telegramdesktop.desktop
