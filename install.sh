@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # adding vazir font to fonts directory 
-if [ ! -d /usr/share/fonts/vazir ];then
-    sudo cp -r fonts/vazir /usr/share/fonts
+if [ ! -d /usr/share/fonts/shabnam ];then
+    sudo cp -r fonts/shabnam /usr/share/fonts
 fi 
 
 # build font information cache files
