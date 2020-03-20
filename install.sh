@@ -10,6 +10,4 @@ fc-cache -fv
 
 # adding custom font config to telegram tdata 
 CUSTOM_FONT=~/.local/share/TelegramDesktop/tdata 
-if [ ! -f $CUSTOM_FONT ];then 
-    cp fc-custom-1.conf $CUSTOM_FONT
-fi
+cp fc-custom-1.conf $CUSTOM_FONT
