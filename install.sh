@@ -33,6 +33,5 @@ EXEC_VAR=$(grep ^Exec $TELEGRAM_DESKTOP_FILE | cut -d'=' -f2,3)
  
 # print Exec variable from '.desktop' file (Usage: debugging stuff)
 echo "new Exec vaule => Exec=$EXEC_VAR"
-
-echo "If you run telegram via terminal just add this to your shell config file (bashrc/zshrc/... ):
+echo "$(tput setaf 1)If you run telegram via terminal just add this to your shell config file (bashrc/zshrc/... ):
     env FONTCONFIG_FILE=$TDATA_DIR/fc-custom-1.conf $EXEC_VAR"
