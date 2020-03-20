@@ -2,7 +2,7 @@
 
 # adding vazir font to fonts directory 
 if [ ! -d ~/.local/share/fonts/shabnam ];then
-    sudo cp -r fonts/shabnam ~/.local/share/fonts
+    sudo cp -r fonts/shabnam ~/.local/share/fonts/shabnam
 fi 
 
 # build font information cache files
