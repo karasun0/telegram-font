@@ -1,5 +1,5 @@
 # telegram-font
-Change telegram font to [Shabnam font](https://github.com/rastikerdar/shabnam-font).
+Change telegram font to opensans and Vazir
 
 ## Run installer
 ```
