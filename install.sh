@@ -3,8 +3,7 @@
 #Variables 
 TDATA_DIR=~/.local/share/TelegramDesktop/tdata
 TELEGRAM_DESKTOP_FILE=/usr/share/applications/$(ls /usr/share/applications | grep -i telegram)
-EXEC_VAR=$(grep ^Exec /usr/share/applications/telegramdesktop.desktop | cut -d'=' -f2,3)
-
+EXEC_VAR=telegram-desktop 
 
 # check telegram '.desktop' file exist or not
 if [ -z $TDATA_DIR ];then
@@ -13,14 +12,15 @@ if [ -z $TDATA_DIR ];then
 fi
 
 
-# adding shabnam font to fonts directory 
-if [ ! -d ~/.local/share/fonts/shabnam ];then
-    sudo cp -r fonts/shabnam ~/.local/share/fonts/shabnam
+# adding Vazir and opensans fonts to fonts directory 
+if [ ! -d ~/.local/share/fonts/vazir ];then
+    sudo cp -r fonts/* ~/.local/share/fonts/
 fi 
 
 
 # build font information cache files
-fc-cache -fv | grep -i shabnam
+echo "Building font cache..."
+fc-cache -fv >> /dev/null 
 cp fc-custom-1.conf $TDATA_DIR
 
 # print Exec variable from '.desktop' file (Usage: debugging stuff)
